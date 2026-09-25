@@ -533,7 +533,6 @@ function Dashboard({ user, onLogout, onEnterAdmin }) {
             <>
               <section className="dashboard-hero">
                 <div className="dashboard-hero-text">
-                  <span className="dashboard-eyebrow">{(ui.personalizedPlanEyebrow || "").toUpperCase()}</span>
                   <h1>{ui.greeting}, {displayName}!</h1>
                   <p>
                     {ui.learningIntro} <strong>{targetLanguage}</strong>, {ui.explainedThrough}{" "}
