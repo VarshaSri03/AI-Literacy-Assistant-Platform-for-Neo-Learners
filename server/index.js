@@ -21,6 +21,7 @@ import aiHelpRoutes from "./routes/aiHelp.js";
 import leaderboardRoutes from "./routes/leaderboard.js";
 import speechRoutes from "./routes/speech.js";
 import adminRoutes from "./routes/admin.js";
+import activityRoutes from "./routes/activity.js";
 
 const app = express();
 
@@ -54,6 +55,7 @@ app.use("/api/ai-help", aiHelpRoutes);
 app.use("/api/leaderboard", leaderboardRoutes);
 app.use("/api/speech", speechRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/activity", activityRoutes);
 
 // CHANGED: now reports real MongoDB status instead of just {ok: true}.
 // readyState: 0 disconnected, 1 connected, 2 connecting, 3 disconnecting.

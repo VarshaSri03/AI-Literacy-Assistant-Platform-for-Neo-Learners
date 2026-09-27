@@ -1007,6 +1007,52 @@
   background-color: #fff;
 }
 
+/* ---- Recommended for You (replaces the old giant hero) ---- */
+.recommended-card { background: linear-gradient(135deg, var(--primary-soft), #fff); }
+.recommended-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.recommended-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 0.8rem 1rem; text-align: left; font-weight: 700; color: var(--ink);
+  cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.recommended-item:hover:not(:disabled) { transform: translateX(3px); box-shadow: 0 4px 14px rgba(124,58,237,0.15); }
+.recommended-item:disabled { cursor: default; opacity: 0.8; }
+.recommended-icon { font-size: 1.2rem; }
+.recommended-arrow { margin-left: auto; color: var(--primary); }
+
+/* ---- Streak + XP + Active Days bar ---- */
+.streak-xp-bar { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.streak-xp-item {
+  flex: 1; min-width: 130px; display: flex; align-items: center; gap: 0.6rem;
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 0.8rem 1rem; box-shadow: var(--shadow-card);
+}
+.streak-xp-icon { font-size: 1.5rem; }
+.streak-xp-item strong { display: block; font-size: 1.2rem; color: var(--ink); }
+.streak-xp-item small { color: var(--ink-faint); font-size: 0.72rem; }
+
+/* ---- Daily Activities checklist ---- */
+.daily-activity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.6rem; margin-bottom: 1rem; }
+.daily-activity-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: var(--surface-sunk); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 0.6rem 0.8rem; font-weight: 700; font-size: 0.85rem; color: var(--ink-soft);
+}
+.daily-activity-item.done { background: var(--green-soft); border-color: var(--green); color: #1c7a48; }
+.daily-activity-icon { font-size: 1.1rem; }
+.daily-goal-row { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap; }
+.admin-mini.active-goal { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ---- Activity Calendar ---- */
+.calendar-nav { display: flex; align-items: center; justify-content: space-between; margin: 0.6rem 0 1rem; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.4rem; }
+.calendar-cell {
+  display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+  background: var(--surface-sunk); border-radius: var(--radius-sm); padding: 0.5rem 0.2rem; font-size: 1rem;
+}
+.calendar-cell small { color: var(--ink-faint); font-size: 0.65rem; }
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */

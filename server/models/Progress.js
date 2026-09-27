@@ -4,6 +4,10 @@
 // weak words — the data source for proficiency benchmarking (see
 // services/proficiency.js) and adaptive recommendations (see
 // routes/learningPath.js). One document per User, linked by userId.
+//
+// CHANGED from your original: added dailyGoalMinutes (defaults to 15) —
+// needed for the new "Today's Goal: 12 / 15 minutes" feature. Existing
+// documents automatically get the default value; nothing else changed.
 
 import mongoose from "mongoose";
 
@@ -30,6 +34,7 @@ const progressSchema = new mongoose.Schema(
     weakWords: { type: [String], default: [] },
     attempts: { type: [attemptSchema], default: [] },
     proficiencyLevel: { type: String, default: "Beginner" },
+    dailyGoalMinutes: { type: Number, default: 15 }, // NEW
   },
   { timestamps: true }
 );
